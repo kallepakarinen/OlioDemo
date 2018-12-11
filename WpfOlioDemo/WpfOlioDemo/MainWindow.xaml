@@ -18,10 +18,10 @@
         <TextBox x:Name="txtBoxAddress" HorizontalAlignment="Left" Height="23" Margin="36,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Puhelinnumero" HorizontalAlignment="Left" Margin="36,255,0,0" VerticalAlignment="Top" Height="25" Width="92"/>
         <TextBox x:Name="txtBoxPhone" HorizontalAlignment="Left" Height="23" Margin="36,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="AsiakasNumero" HorizontalAlignment="Left" Margin="36,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="Asiakasnumero" HorizontalAlignment="Left" Margin="36,33,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBoxCstmrNu" HorizontalAlignment="Left" Height="23" Margin="36,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <DataGrid x:Name="dgCustomer" HorizontalAlignment="Left" Height="221" Margin="225,33,0,0" VerticalAlignment="Top" Width="359"/>
-        <Button x:Name="btnAddCustomer" Content="Lisää" HorizontalAlignment="Left" Margin="36,322,0,0" VerticalAlignment="Top" Width="120" Height="28"/>
+        <Button x:Name="btnAddCustomer" Content="Lisää" HorizontalAlignment="Left" Margin="36,322,0,0" VerticalAlignment="Top" Width="120" Height="28" Click="BtnAddCustomer_Click"/>
 
     </Grid>
 </Window>

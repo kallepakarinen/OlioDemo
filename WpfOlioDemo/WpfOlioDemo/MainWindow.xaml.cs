@@ -24,5 +24,19 @@ namespace WpfOlioDemo
         {
             InitializeComponent();
         }
+
+        List<Customer> customers = new List<Customer>();
+        private void BtnAddCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            Customer customer = new Customer();
+            customer.CustomerNum = int.Parse(txtBoxCstmrNu.Text);
+            customer.FirstName = txtBoxFName.Text;
+            customer.LastName = txtBoxLName.Text;
+            customer.Address = txtBoxAddress.Text;
+            customer.Phone = txtBoxPhone.Text;
+        
+            customers.Add(customer);
+         
+        }
     }
 }
