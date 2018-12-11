@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5535825-E4D5-4AEC-A981-7BE26FACDCA6}</ProjectGuid>
+    <ProjectGuid>{1D57EF56-8153-4113-9BBF-9B53D634B2D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WpfOlioDemo</RootNamespace>
     <AssemblyName>WpfOlioDemo</AssemblyName>
