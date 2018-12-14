@@ -26,17 +26,17 @@
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="Turquoise"/>
                     <Setter Property="FontWeight" Value="SemiBold"/>
-                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderThickness" Value="1,0,1,2"/>
                     <Setter Property="BorderBrush" Value="Black"/>
                 </Style>
             </DataGrid.Resources>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Asiakasnumero" Binding="{Binding CustomerNum}" Width="100"/>
-                <DataGridTextColumn Header="Etunimi" Binding="{Binding FirstName}" Width="100"/>
-                <DataGridTextColumn Header="Sukunimi" Binding="{Binding LastName}" Width="100"/>
-                <DataGridTextColumn Header="Osoite" Binding="{Binding Address}" Width="100"/>
-                <DataGridTextColumn Header="Puhelin"  Binding="{Binding Phone}" Width="*"/>
+                <DataGridTextColumn Header=" Asiakasnumero" Binding="{Binding CustomerNum}" Width="100"/>
+                <DataGridTextColumn Header=" Etunimi" Binding="{Binding FirstName}" Width="100"/>
+                <DataGridTextColumn Header=" Sukunimi" Binding="{Binding LastName}" Width="100"/>
+                <DataGridTextColumn Header=" Osoite" Binding="{Binding Address}" Width="100"/>
+                <DataGridTextColumn Header=" Puhelin"  Binding="{Binding Phone}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnAddCustomer" Content="Lisää" HorizontalAlignment="Left" Margin="37,132,0,0" VerticalAlignment="Top" Width="216" Height="28" Click="BtnAddCustomer_Click"/>
