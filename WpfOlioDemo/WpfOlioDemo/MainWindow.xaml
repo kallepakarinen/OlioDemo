@@ -5,23 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfOlioDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Customers" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Content="Etunimi" HorizontalAlignment="Left" Margin="36,92,0,0" VerticalAlignment="Top" Height="26" Width="58"/>
-        <TextBox x:Name="txtBoxFName" HorizontalAlignment="Left" Height="23" Margin="36,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Sukunimi" HorizontalAlignment="Left" Margin="36,147,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-        <TextBox x:Name="txtBoxLName" HorizontalAlignment="Left" Height="23" Margin="36,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Osoite" HorizontalAlignment="Left" Margin="36,201,0,0" VerticalAlignment="Top" Height="26" Width="58"/>
-        <TextBox x:Name="txtBoxAddress" HorizontalAlignment="Left" Height="23" Margin="36,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Puhelinnumero" HorizontalAlignment="Left" Margin="36,255,0,0" VerticalAlignment="Top" Height="25" Width="92"/>
-        <TextBox x:Name="txtBoxPhone" HorizontalAlignment="Left" Height="23" Margin="36,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Asiakasnumero" HorizontalAlignment="Left" Margin="36,33,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBoxCstmrNu" HorizontalAlignment="Left" Height="23" Margin="36,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <DataGrid x:Name="dgCustomer" HorizontalAlignment="Left" Height="221" Margin="225,33,0,0" VerticalAlignment="Top" Width="359"/>
-        <Button x:Name="btnAddCustomer" Content="Lisää" HorizontalAlignment="Left" Margin="36,322,0,0" VerticalAlignment="Top" Width="120" Height="28" Click="BtnAddCustomer_Click"/>
+
+        <Label Content="Etunimi" HorizontalAlignment="Left" Margin="37,33,0,0" VerticalAlignment="Top" Height="26" Width="58"/>
+        <TextBox x:Name="txtBoxFName" HorizontalAlignment="Left" Height="23" Margin="133,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Sukunimi" HorizontalAlignment="Left" Margin="37,56,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
+        <TextBox x:Name="txtBoxLName" HorizontalAlignment="Left" Height="23" Margin="133,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Osoite" HorizontalAlignment="Left" Margin="37,79,0,0" VerticalAlignment="Top" Height="26" Width="58"/>
+        <TextBox x:Name="txtBoxAddress" HorizontalAlignment="Left" Height="23" Margin="133,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Puhelinnumero" HorizontalAlignment="Left" Margin="36,102,0,0" VerticalAlignment="Top" Height="25" Width="92"/>
+        <TextBox x:Name="txtBoxPhone" HorizontalAlignment="Left" Height="23" Margin="133,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Asiakasnumero" HorizontalAlignment="Left" Margin="37,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.618,3.344"/>
+        <TextBox x:Name="txtBoxCstmrNu" HorizontalAlignment="Left" Height="23" Margin="133,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="dgCustomer" HorizontalAlignment="Left" Height="150" Margin="258,10,0,0" VerticalAlignment="Top" Width="526">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Turquoise"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Asiakasnumero" Binding="{Binding CustomerNum}" Width="100"/>
+                <DataGridTextColumn Header="Etunimi" Binding="{Binding FirstName}" Width="100"/>
+                <DataGridTextColumn Header="Sukunimi" Binding="{Binding LastName}" Width="100"/>
+                <DataGridTextColumn Header="Osoite" Binding="{Binding Address}" Width="100"/>
+                <DataGridTextColumn Header="Puhelin"  Binding="{Binding Phone}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnAddCustomer" Content="Lisää" HorizontalAlignment="Left" Margin="37,132,0,0" VerticalAlignment="Top" Width="216" Height="28" Click="BtnAddCustomer_Click"/>
 
     </Grid>
 </Window>
